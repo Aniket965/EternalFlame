@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Eraser",
+        "repositoryURL": "http://github.com/aniket965/Eraser.git",
+        "state": {
+          "branch": null,
+          "revision": "abb7f5dac17af62e2113b468ad4b50cc9a938add",
+          "version": "1.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
