@@ -17,7 +17,7 @@ public class EternalFlame {
         queue.async {
             while self.isRunnig {
                 for (index,frame) in  self.frames.enumerated() {
-                    let fractionCompleted :Float32 = Float32((index + 1) / self.frames.count)
+                    let fractionCompleted :Float32 = Float32((index + 1)) / Float32(self.frames.count)
                     let d = self.easeInOut(t: fractionCompleted) * Float32(self.delay)
                     UpdateCLI(msg: "\(frame)", delay: UInt32(d) )
                 }
