@@ -16,8 +16,10 @@ public class EternalFlame {
         self.isRunnig = true
         queue.async {
             while self.isRunnig {
-                for frame in self.frames {
-                    UpdateCLI(msg: "\(frame)", delay: self.delay)
+                for (index,frame) in  self.frames.enumerated() {
+                    let fractionCompleted :Float32 = Float32((index + 1) / self.frames.count)
+                    let d = self.easeInOut(t: fractionCompleted) * Float32(self.delay)
+                    UpdateCLI(msg: "\(frame)", delay: UInt32(d) )
                 }
             }
         }
@@ -30,4 +32,13 @@ public class EternalFlame {
         self.isRunnig = false
     }
 
+    // Easing takes value b/w 0,1
+    private func easeInOut(t:Float32) -> Float32 {
+       return t < 0.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1
+    }
+
+}
+public enum Flametype {
+    case ease
+    case linear
 }
