@@ -1,30 +1,13 @@
 # EternalFlame 🔥🔥
-Give life 😇To Dead 💀Terminal with EternalFlame 🔥
+> Give life 😇To Dead 💀Terminal with EternalFlame 🔥
+
+<img src="assets/demoEf.gif" width="485">
+
 ## ⚙️ Installation
 
 ```swift
-import PackageDescription
+.package(url: "http://github.com/aniket965/EternalFlame.git", from: "1.0.1")
 
-let package = Package(
-    name: "MyPackage",
-    dependencies: [
-        .package(url: "http://github.com/aniket965/EternalFlame.git", from: "1.0.0")
-    ],
-    targets: [
-        .target(
-            name: "MyPackage",
-            dependencies: ["EternalFlame"]
-        )
-    ]
-)
 ```
 ## 📗 Usage
-```swift
-import EternalFlame
-
-let flame = EternalFlame(frames:["🌎 ","🌏 ","🌍 "],delay:100000)
-flame.giveLife()
-sleep(3)
-flame.takeLife()
-
-```
+![](assets/ef.png)
